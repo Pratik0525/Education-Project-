@@ -43,7 +43,7 @@ const ourteam = () => {
             <h1 className="text-2xl font-serif ">OUR TEAM</h1>
           </div>
           <div className="">
-            <div className="md:flex md:justify-between grid grid-cols-2  gap-10  py-9 ">
+            <div className="md:flex md:justify-between grid grid-cols-1  gap-10  py-9 ">
               {icons.map((val, i) => {
                 return (
                   <>

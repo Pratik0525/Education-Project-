@@ -41,7 +41,7 @@ const ourfeature = () => {
             <IoIosArrowForward className="md:w-10 w-8 h-10 " />
           </div>
         </div>
-        <div className="md:w-10/12 w-8/12 mx-auto  md:flex md:justify-between grid grid-cols-1 gap-10 md:gap-4 lg:gap-0">
+        <div className="md:w-10/12 w-10/12 mx-auto  md:flex md:justify-between grid grid-cols-1 gap-10 md:gap-4 lg:gap-0">
           {feature.map((val, i) => {
             return (
               <div className=" bg-white lg:w-80 md:w-60 flex flex-col gap-3 pb-7 rounded-lg shadow-lg shadow-gray-300">
@@ -51,13 +51,13 @@ const ourfeature = () => {
                     className="rounded-t-lg md:w-60 lg:w-80  "
                   />
                 </div>
-                <div className="lg:px-5 md:px-2 px-2 py-3">
+                <div className="lg:px-5 md:px-2 px-4 py-3">
                   <h1 className="text-red-500">{val.title}</h1>
                   <p className="text-[#497faf] font-medium lg:text-lg md:text-md">
                     {val.description}
                   </p>
                 </div>
-                <div className="flex justify-between items-center lg:px-5 md:px-2 px-2">
+                <div className="flex justify-between items-center lg:px-5 md:px-2 px-4">
                   <button className="w-16 h-8 bg-[#497faf] text-white font-semibold rounded-md">
                     {val.button}
                   </button>

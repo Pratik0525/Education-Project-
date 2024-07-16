@@ -48,7 +48,7 @@ const icon = () => {
           {icons.map((val, i) => {
             return (
               <>
-                <div className="w-fit h-80  flex flex-col justify-center items-center gap-4 py-6 lg:px-4 md:px-1 group bg-gray-50 shadow-md shadow-gray-200 rounded-lg  ">
+                <div className="w-fit h-80  flex flex-col justify-center items-center gap-4 py-6 lg:px-4 md:px-1 px-2 group bg-gray-50 shadow-md shadow-gray-200 rounded-lg  ">
                   <div>{val.icon}</div>
                   <div className="flex flex-col gap-2 text-center">
                     <h1 className="lg:text-lg uppercase md:text-md  text-[#497faf] group-hover:text-red-500 font-semibold transition-all ease-in duration-100 delay-75">

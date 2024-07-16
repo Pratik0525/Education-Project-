@@ -17,7 +17,7 @@ const upcomingevent = () => {
             </div>
           </div>
 
-          <div className="md:flex flex  gap-3  ">
+          <div className="md:flex grid  gap-3  ">
             <div className="  lg:w-2/12 md:w-3/12  ">
               <Image
                 src={meeting}
@@ -32,7 +32,7 @@ const upcomingevent = () => {
                 <h1 className="font-semibold md:text-lg text-xl ">
                   Free Seminar at London
                 </h1>
-                <span className="font-thin italic text-[#86999b]">
+                <span className="font-thin italic text-[#323333]">
                   17 Sep 2019
                 </span>
               </div>
