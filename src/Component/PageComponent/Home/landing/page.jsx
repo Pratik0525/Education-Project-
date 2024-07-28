@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import background from "../../public/Boy.png";
+import background from "../../../../../public/Boy.png";
 // import Typewriters from "typewriter-effect";
 
 const landing = () => {

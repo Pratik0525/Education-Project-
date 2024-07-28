@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import Team1 from "../../public/team1.jpg";
-import Team2 from "../../public/team2.jpg";
-import Team3 from "../../public/team3.jpg";
+import Team1 from "../../../.../../../../public/team1.jpg";
+import Team2 from "../../../.../../../../public/team2.jpg";
+import Team3 from "../../../.../../../../public/team3.jpg";
 
 const feature = [
   {

@@ -5,31 +5,35 @@ import { GiMagickTrick } from "react-icons/gi";
 import { IoMdFlashlight } from "react-icons/io";
 import { MdManageAccounts } from "react-icons/md";
 import Image from "next/image";
-import Team1 from "../../public/team1.jpg";
-import Team2 from "../../public/team2.jpg";
-import Team3 from "../../public/team3.jpg";
-import Team4 from "../../public/team4.jpg";
+// import Team1 from "../../public/team1.jpg";
+// import Team2 from "../../public/team2.jpg";
+// import Team3 from "../../public/team3.jpg";
+// import Team4 from "../../public/team4.jpg";
+import Team1 from "../../../../../public/web.jpg";
+import Team2 from "../../../../../public/Cyber.jpg";
+import Team3 from "../../../../../public/uiux.jpg";
+import Team4 from "../../../../../public/python.jpg";
 import { useRouter } from "next/navigation";
 
 const icons = [
   {
     image: Team1,
-    name: "Mickey Rorey",
+    name: "Web Developer",
     title2: "Founder",
   },
   {
     image: Team2,
-    name: "Damie Glendell",
+    name: "Cyber Security",
     title2: "Co-Director",
   },
   {
     image: Team3,
-    name: "Jenny Sheen",
+    name: "UI/UX",
     title2: "Marketing Director",
   },
   {
     image: Team4,
-    name: "James Catwin",
+    name: "python",
     title2: "Art Director",
   },
 ];
@@ -47,14 +51,14 @@ const ourteam = () => {
               {icons.map((val, i) => {
                 return (
                   <>
-                    <div className="w-fit h-fit  flex flex-col justify-center items-center gap-4 shadow-lg shadow-gray-200  group bg-gray-50 rounded-lg pb-8">
+                    <div className="w-fit h-80  flex flex-col justify-center items-center gap-4 shadow-lg shadow-gray-200  group bg-gray-50 rounded-lg pb-8">
                       <div className=" text-[#497faf]  transition-all ease-in duration-300 delay-50">
                         <Image
                           src={val.image}
                           width={500}
                           height={500}
                           alt="image of a man"
-                          className="rounded-t-lg "
+                          className="rounded-t-lg h-60 object-cover "
                         />
                       </div>
                       <div className="flex flex-col gap-2 text-center">

@@ -3,8 +3,8 @@ import React from "react";
 import { FiMessageSquare } from "react-icons/fi";
 import { PiLinkSimpleBold } from "react-icons/pi";
 import { IoPerson } from "react-icons/io5";
-import img from "../../public/blog3.jpg";
-import imgs from "../../public/blog4.jpg";
+import img from "../../../../../public/blog3.jpg";
+// import imgs from "../../public/blog4.jpg";
 
 const blog = [
   {

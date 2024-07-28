@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import meeting from "../../public/upcomingevent.jpg";
+import meeting from "../../../../../public/upcomingevent.jpg";
 const upcomingevent = () => {
   return (
     <>
