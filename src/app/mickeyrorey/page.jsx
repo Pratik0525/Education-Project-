@@ -4,6 +4,7 @@ import imgss from "/public/web.jpg";
 import imagess from "/public/web.jpg";
 import { IoMdStar, IoMdStarHalf } from "react-icons/io";
 import { FaArrowCircleRight } from "react-icons/fa";
+import Recentimage1 from "../../../public/web.jpg";
 const ico = [
   {
     iconss: <FaArrowCircleRight />,
@@ -31,13 +32,52 @@ const ico = [
     des: "Open Source",
   },
 ];
+const recent = [
+  {
+    image: Recentimage1,
+    topic: "Five Training Ro...",
+    description: "Cras venenatis erat ac massa ultricies,...",
+  },
+  {
+    image: Recentimage1,
+    topic: "Five Training Ro...",
+    description: "Cras venenatis erat ac massa ultricies,...",
+  },
+  {
+    image: Recentimage1,
+    topic: "Five Training Ro...",
+    description: "Cras venenatis erat ac massa ultricies,...",
+  },
+];
+const Checkboxs = [
+  {
+    name: "Corporate",
+    number: "(2)",
+  },
+  {
+    name: "Design",
+    number: "(2)",
+  },
+  {
+    name: "Learning",
+    number: "(2)",
+  },
+  {
+    name: "Tools",
+    number: "(2)",
+  },
+  {
+    name: "Traning",
+    number: "(2)",
+  },
+];
 const mickeyrorey = () => {
   return (
     <>
       {" "}
-      <main className=" w-11/12 mx-auto">
-        <div className="flex ">
-          <div className="w-3/12 px-4 grid gap-4 h-fit">
+      <main className=" w-11/12 mx-auto ">
+        <div className="flex px-4 ">
+          <div className="w-3/12  grid gap-4 h-fit">
             <div>
               <h1 className="text-2xl font-semibold">About : Mickey Rorey</h1>
             </div>
@@ -154,14 +194,14 @@ const mickeyrorey = () => {
                   time I comment.
                 </p>
               </div>
-              <div className="flex justify-end items-center">
-                <button className="w-fit h-fit px-3 py-2 bg-[#497faf] text-white font-bold text-lg rounded-lg">
+              <div className="flex justify-end items-center mr-5 mt-3 ">
+                <button className="w-fit h-fit px-3 py-2 bg-[#497faf] text-white font-bold text-md rounded-lg">
                   Comment
                 </button>
               </div>
             </div>
           </div>
-          <div className="w-3/12 h-fit bg-green-500 ">
+          <div className="w-3/12 h-fit pl-2 grid gap-10 ">
             <div className="grid gap-5">
               <label htmlFor="email" className="text-xl font-medium">
                 Search
@@ -169,20 +209,107 @@ const mickeyrorey = () => {
               <div className=" flex w-fit items-center ">
                 <input
                   type="text"
-                  className="h-10 pl-2 rounded-l-md w-52"
+                  className="h-10 pl-2 rounded-l-sm w-52"
                   placeholder="Enter Keyword"
                 />
-                <p className="rounded-r-md bg-[#497faf] text-white h-10 flex justify-center items-center font-bold text-sm px-2">
+                <p className="rounded-r-sm bg-[#497faf] text-white h-10 flex justify-center items-center font-bold text-sm px-2">
                   SUBMIT
                 </p>
               </div>
             </div>
-            <div>
-              <div className="">photo</div>
-              <div>text</div>
+            <div className="  grid gap-10">
+              <div className="flex gap-2 justify-center items-center">
+                <p className="text-lg w-10/12 font-semibold">Recent News</p>
+                <div className="w-full h-[1px] bg-gray-400"></div>
+              </div>
+              <main className="  ">
+                <div className="h-fit grid gap-10 ">
+                  {recent.map((val, i) => {
+                    return (
+                      <>
+                        <div className=" flex gap-2 ">
+                          <div className="">
+                            <Image
+                              src={val.image}
+                              width={500}
+                              height={500}
+                              className="w-20 h-full object-cover"
+                              alt="web developer"
+                            />
+                          </div>
+                          <div className="grid">
+                            <h1 className="text-[#497faf] font-bold">
+                              {val.topic}
+                            </h1>
+                            <span className="text-gray-400 text-sm">
+                              {val.description}
+                            </span>
+                          </div>
+                        </div>
+                      </>
+                    );
+                  })}
+                </div>
+              </main>
             </div>
-            <div>Hi</div>
-            <div>Boy</div>
+            <div className="grid gap-10">
+              <div className="flex gap-2 justify-center items-center">
+                <p className="text-xl w-7/12 font-semibold">Categories</p>
+                <div className="w-full h-[0.5px] bg-gray-400"></div>
+              </div>
+              <div>
+                <div className="grid gap-5">
+                  {Checkboxs.map((val, i) => {
+                    return (
+                      <>
+                        <main
+                          key={i}
+                          className="flex justify-between items-center group cursor-pointer "
+                        >
+                          <div className="flex gap-3 ">
+                            <input
+                              type="checkbox"
+                              name=""
+                              id="name"
+                              className="cursor-pointer text-[#497faf]"
+                            />
+                            <label
+                              htmlFor="name"
+                              className="text-[#497faf] group-hover:text-red-500 cursor-pointer tansition-all delay-75 duration-300 ease-in-out"
+                            >
+                              {val.name}
+                            </label>
+                          </div>
+                          <div className="w-8 h-8 bg-gray-200 flex justify-center items-center rounded-lg">
+                            <p className="text-[#497faf] text-sm group-hover:text-red-500 cursor-pointer tansition-all delay-75 duration-300 ease-in-out">
+                              {val.number}
+                            </p>
+                          </div>
+                        </main>
+                      </>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+            <div className="grid gap-10 ">
+              <div className="flex gap-2 justify-center items-center">
+                <p className="text-xl w-3/12 font-semibold">Tags</p>
+                <div className="w-full h-[0.5px] bg-gray-400"></div>
+              </div>
+              <div className="flex gap-5">
+                <div className="w-12 p-2 h-fit bg-gray-200 flex justify-center items-center rounded-lg">
+                  <p className=" text-[#497faf] text-sm group-hover:text-red-500 cursor-pointer tansition-all delay-75 duration-300 ease-in-out">
+                    art
+                  </p>
+                </div>
+                <div className="w-12 p-2 h-fit bg-gray-200 flex justify-center items-center rounded-lg">
+                  <p className="text-[#497faf] text-sm group-hover:text-red-500 cursor-pointer tansition-all delay-75 duration-300 ease-in-out">
+                    tips
+                  </p>
+                </div>
+              </div>
+            </div>
             <div>how</div>
             <div>are</div>
             <div>you</div>

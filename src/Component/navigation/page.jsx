@@ -34,6 +34,9 @@ const Links = [
 ];
 const navigation = () => {
   const [Prev, setPrev] = useState(false);
+  const menuClick = () => {
+    Prev ? setPrev(false) : setPrev(true);
+  };
   return (
     <nav>
       <div className="bg-[#497faf]">
@@ -67,30 +70,39 @@ const navigation = () => {
               })}
             </div>
           </div>
-          <div>
+
+          <div
+            onClick={menuClick}
+            className={`bg-green-500 h-full flex justify-center items-center
+              `}
+          >
             <IoIosMenu className="text-3xl flex md:hidden" />
           </div>
         </div>
       </div>
       {/* Sidebar */}
-      {/* <div className="md:hidden flex ">
-        <div className="h-96 w-full bg-[#497faf]   ">
-          <div className="text-white flex flex-col justify-center items-center w-full  ">
-            {Links.map((val, i) => {
-              return (
-                <Link
-                  key={i}
-                  href={val.href}
-                  align="center"
-                  className=" text-lg py-3 border-2 px-6 hover:text-[#fee6af] w-full transition-all delay-100 duration-300 ease-in-out "
-                >
-                  {val.title}
-                </Link>
-              );
-            })}
+      {Prev && (
+        <>
+          <div className="md:hidden flex ">
+            <div className="h-96 w-full bg-[#497faf]   ">
+              <div className="text-white flex flex-col justify-center items-center w-full  ">
+                {Links.map((val, i) => {
+                  return (
+                    <Link
+                      key={i}
+                      href={val.href}
+                      align="center"
+                      className=" text-lg py-3 border-2 px-6 hover:text-[#fee6af] w-full transition-all delay-100 duration-300 ease-in-out "
+                    >
+                      {val.title}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
           </div>
-        </div>
-      </div> */}
+        </>
+      )}
     </nav>
   );
 };
